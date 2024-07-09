@@ -170,7 +170,6 @@ public:
     }
     bool DoSomething(int a) // 读取用户输入并执行
     {
-        char name_[10];
         switch(a)
         {
             case 1:
