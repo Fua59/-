@@ -22,7 +22,7 @@ public:
         strcpy(phonenumber, p);
         strcpy(address, add);
     }
-    void SetInfo(char name_[], int g, int a, char p[], char add[])
+    void SetInfo(char name_[], int g, int a, char p[], char add[]) // 修改信息
     {
         strcpy(name, name_);
         gender = g;
@@ -43,10 +43,6 @@ public:
     char * Getname()
     {
         return name;
-    }
-    int Getgender()
-    {
-        return gender;
     }
 };
 class Address
@@ -172,40 +168,42 @@ public:
     {
         switch(a)
         {
-            case 1:
+            case 1: // 添加联系人
             {
                 Add();
                 break;
             }
-            case 2:
+            case 2: // 显示整个通讯录
             {
                 Show();
                 break;
             }
-            case 3:
+            case 3: // 删除联系人
             {
                 Del();
                 break;
             }
-            case 4:
+            case 4: // 查找联系人
             {
                 Search();
                 break;
             }
-            case 5:
+            case 5: // 编辑联系人
             {
                 Revise();
                 break;
             }
-            case 6:
+            case 6: // 清空通讯录
             {
                 Clear();
                 break;
             }
-            case 0:
+            case 0: // 退出通讯录
             {
                 return true;
             }
+            default:
+                system("cls");
         }
         return false;
     }
